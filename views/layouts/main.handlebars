@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Luxurious+Roman&family=Moon+Dance&display=swap" rel="stylesheet">
+    <link href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <title>BarHop</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+      <script>
+      $( function() {
+        $(".sortable").sortable({
+          cancel: ""
+        });
+      } );
+      </script>
+  </head>
+  <body>
+
+    <div class="holy-grail-grid">
+      <div class="holy-grail-header">
+        <div class="heading">
+          <span class="fast-flicker">b</span>ar<span class="flicker">h</span>op
+        </div>
+        <div class="neon">
+          <span class="text" data-text="Let's Get Ready To Stumble">Let's Get Ready To Stumble </span>
+          <span class="gradient"></span>
+          <span class="spotlight"></span>
+        </div>
+      </div>
+      
+      <form class="holy-grail-left">
+        <h2 class="text-center">Search for a City</h2>
+        <div class="input-group input-group-rounded">
+          <input class="input-group-field" name="city" id="search-bar" type="search">
+          <div class="input-group-button">
+            <input type="submit" onclick="getBarVal()" class="button primary" value="Search">
+          </div>
+        </div>
+        <p id = 'error-msg'></p>   
+        <input type="submit" id="clear-list" class="button secondary expanded" value="Clear List"></input>
+        <div id="bar-history">
+          <div class="sortable"></div>
+        </div>
+        <input type="submit" id="generate-route" class="button secondary expanded" value="Generate Route"></input>
+      </form>
+    
+      <div class="mid" id="bars-div"></div>  
+      
+
+      <div class="holy-grail-right">
+        <h2 class="text-center">Generated Route</h2>
+        <div id='map'></div>
+      </div>
+
+      <div class="holy-grail-footer">
+        <h3>© BarHop Software 2022</h3>
+        <div id="icon">
+        <a href="https://github.com/SatyaHMehta/firstGroupProject" target="_blank" ><img class="right" src="./Images/github-icon.svg" alt="github-icon"/></a>
+        <a href="https://www.instagram.com/the_barhopapp/" target="_blank"><img class="right" id='insta' src="./Images/1161953_instagram_icon.svg" alt="1161953_instagram_icon"/></a>
+        </div> 
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=S8d7L47mdyAG5nHG09dUnSPJjreUVPeC"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=S8d7L47mdyAG5nHG09dUnSPJjreUVPeC"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="./main.handlebars"></script>
+  </body>
+</html>
