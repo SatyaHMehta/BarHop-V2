@@ -37,7 +37,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/search');
       } else {
         alert(response.statusText);
       }
@@ -45,10 +45,11 @@ const loginFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.login-form')
+    .querySelector('.log-form')
     .addEventListener('submit', loginFormHandler);
   
   document
-    .querySelector('.signup-form')
+    .querySelector('.register-form')
     .addEventListener('submit', signupFormHandler);
+    
   

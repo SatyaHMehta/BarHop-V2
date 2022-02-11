@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>BarHop</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   </head>
   <body>
@@ -34,7 +34,7 @@
         <div class="callout">
           <ul class="menu simple">
             <li><a href="#">{{blogPost.author}}</a></li>
-            <li><a href="#">{{reply.comment}}</a></li>
+            {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
           </ul>
         </div>
       </div>
@@ -47,13 +47,13 @@
         <div class="callout">
           <ul class="menu simple">
             <li><a href="#">{{blogPost.author}}</a></li>
-            <li><a href="#">{{reply.comment}}</a></li>
+            {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
           </ul>
         </div>
       </div>
 
       <div class="blog-post">
-        <h3>post title<small>3/6/2015</small></h3>
+        <h3>post title<small>{{blogPost.date}}</small></h3>
         <img class="thumbnail" src="https://placehold.it/850x350">
         <p>{{blogPost.comment}}</p>
         <div>{{blogPost.likes}}</div>
@@ -61,13 +61,13 @@
         <div class="callout">
           <ul class="menu simple">
             <li><a href="#">{{blogPost.author}}</a></li>
-            <li><a href="#">{{reply.comment}}</a></li>
+            {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
           </ul>
         </div>
       </div>
 
       <div class="blog-post">
-        <h3>{{blogPost.title}}<small>3/6/2015</small></h3>
+        <h3>{{blogPost.title}}<small>{{blogPost.date}}</small></h3>
         <img class="thumbnail" src="https://placehold.it/850x350">
         <p>{{blogPost.comment}}</p>
         <div>{{blogPost.likes}}</div>
@@ -75,7 +75,7 @@
         <div class="callout">
           <ul class="menu simple">
             <li><a href="#">{{blogPost.author}}</a></li>
-            <li><a href="#">{{reply.comment}}</a></li>
+            {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
           </ul>
         </div>
       </div>
