@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require('express').Router()
 // const { User, blogPost} = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -75,10 +75,33 @@ router.get('/profile', withAuth, async (req, res) => {
 
 
 router.get('/search', (req, res) => {
+
+  res.render('search');
+});
+
+router.get('/search', (req, res) => {
   // If the user is already logged in, redirect the request to another route
  
   res.render('search');
 });
+
+router.get('/post', async (req, res) => {
+  res.render('post')
+})
+//   try {
+//     const blogData = await blogPost.findAll()
+
+//     const blogPost = blogData.map((project) => project.get({ plain: true }));
+
+//     res.render('post', {
+//       ...blogPost
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+
 
 
 
