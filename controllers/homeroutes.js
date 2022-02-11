@@ -18,14 +18,18 @@ router.get('/', async (req, res) => {
     // const blogPost = blogData.map((project) => project.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('landing', { 
-      //   blogPost, 
-      // logged_in: req.session.logged_in 
-    });
+    res.render('landing');
   } catch (err) {
     res.status(500).json(err);
   }
 });
+router.get('/homepage', async (req, res) => {
+  try {
+    res.render('homepage');
+  } catch (err){
+    res.status(500).json(err);
+  }
+})
 
 router.get('/blogPost/:id', async (req, res) => {
   try {
