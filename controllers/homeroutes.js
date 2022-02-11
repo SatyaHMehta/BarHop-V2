@@ -4,6 +4,11 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
+    // if (req.session.logged_in) {
+    //   res.redirect('/p');
+    //   return;
+    // }
+  
     // Get all projects and JOIN with user data
     // const blogData = await blogPost.findAll({
     //   include: [
@@ -88,6 +93,10 @@ router.get('/search', (req, res) => {
 router.get('/post', async (req, res) => {
   res.render('post')
 })
+
+router.get('/review', async (req, res) => {
+  res.render('review')
+})
 //   try {
 //     const blogData = await blogPost.findAll()
 
@@ -105,14 +114,5 @@ router.get('/post', async (req, res) => {
 
 
 
-router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
-
-  res.render('login');
-});
 
 module.exports = router;
