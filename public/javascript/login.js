@@ -48,17 +48,8 @@ const signupFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    const getResponse = await fetch("/homepage", {
-      method: "GET",
-    });
-
-    if (getResponse.ok) {
-      document.location.replace("/homepage");
-    } else {
-      alert(getResponse.statusText);
-    }
   } else {
-    console.log("Error");
+    document.location.replace("/homepage");
   }
 };
 

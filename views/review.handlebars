@@ -1,10 +1,12 @@
 <div class="review-form">
     <h2>Write a review</h2>
     <form>
-      <input type="text" title="title" placeholder="title" />
-      <input type="text" title="username" placeholder="username" />
-      <input type="text" title="date" placeholder="date" />
-      <input type="text" title="comment" placeholder="comment" />
+      <input type="text" title="title" placeholder="title" id="review-title" />
+      <input type="text" title="username" placeholder="username" id="review-username" />
+      <input type="text" title="date" placeholder="date" id="review-date" />
+      <!-- <input type="text" title="comment" placeholder="comment" id="review-comment" /> -->
+      <textarea name="text" id="review-comment" rows="10" placeholder="comment"></textarea>
       <button type="submit" class="btn">Submit</button>
     </form>
   </div>
+  <script src="./javascript/review.js"></script>
