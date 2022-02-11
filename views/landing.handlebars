@@ -1,31 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/" />
-    <title>BarHop</title>
+<div>
+  <div class="front">
+    <h1 id="intro">Hello</h1>
+    <h2>Hoppers!</h2>
+  </div>
 
-  </head>
-  <body>
-    <div>
-      <div class="front">
-        <h1 id="intro">Hello</h1>
-        <h2>Hoppers!</h2>
-      </div>
-      <div class="enterAge hide">
-        <label>Enter your age:</label>
-        <input type="text" placeholder="age.." id="myInput" /><br />
-        <button class="submit" type="button" onclick="getInputValue();">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>LOGIN</h2>
+      <form class="login-form">
+        <div>
+          <label for="">Email:</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label for="">Password</label>
+          <input type="text" />
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <h2>SIGN UP</h2>
+      <form class="signup-form">
+        <div>
+          <label for="" placeholder="Enter age">Age</label>
+          <input type="text" id="registerAge" />
+        </div>
+        <div>
+          <label for="">Email:</label>
+          <input type="text" id="registerEmail" />
+        </div>
+        <div>
+          <label for="">Password</label>
+          <input type="text" id="registerPassword" />
+        </div>
+        <button class="submit" type="submit">
           Submit
         </button>
-      </div>
-      <h3 id="ageVal"></h3>
+        <h3 id="ageVal"></h3>
+      </form>
     </div>
-    <button class="explore pushable" onclick="letsExplore();">
-      <span class="exploreTxt">Let's Explore </span>
-    </button>
-    <script src="/javascript/script2.js"></script>
-  </body>
-</html>
+  </div>
+
+</div>

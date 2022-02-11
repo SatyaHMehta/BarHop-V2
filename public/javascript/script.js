@@ -3,7 +3,7 @@ var formEl = document.querySelector("form");
 var barHistory = document.querySelector("#bar-history");
 var getRoute = document.querySelector("#generate-route");
 var clearList = document.querySelector("#clear-list");
-var barDiv = document.querySelector("#bars-div");
+// var barDiv = document.querySelector("#bars-div");
 var removeCard = document.querySelector("#cardEl");
 var sortableDiv = $(".sortable");
 barAddress = [];
@@ -130,32 +130,32 @@ formEl.addEventListener("submit", function (e) {
   inputEl.value = "";
 });
 
-barDiv.addEventListener("click", function (e) {
-  if (e.target.matches(".addBtn")) {
-    var clickedBtn = e.target;
-    var barName = clickedBtn.parentElement.children[1].children[0].innerHTML;
-    var barAddress = clickedBtn.parentElement.children[1].children[1].innerHTML;
-    var newBtn = document.createElement("button");
+// barDiv.addEventListener("click", function (e) {
+//   if (e.target.matches(".addBtn")) {
+//     var clickedBtn = e.target;
+//     var barName = clickedBtn.parentElement.children[1].children[0].innerHTML;
+//     var barAddress = clickedBtn.parentElement.children[1].children[1].innerHTML;
+//     var newBtn = document.createElement("button");
 
-    newBtn.textContent = barName;
-    newBtn.setAttribute("id", "cardEl");
-    newBtn.setAttribute("data-value", barAddress);
-    newBtn.setAttribute("class", "button success expanded");
-    newBtn.setAttribute("onclick", "removeBtn()");
-    sortableDiv.append(newBtn);
+//     newBtn.textContent = barName;
+//     newBtn.setAttribute("id", "cardEl");
+//     newBtn.setAttribute("data-value", barAddress);
+//     newBtn.setAttribute("class", "button success expanded");
+//     newBtn.setAttribute("onclick", "removeBtn()");
+//     sortableDiv.append(newBtn);
 
-    const previousSearches = JSON.parse(localStorage.getItem("bars")) ?? [];
-    const previousSearches2 = JSON.parse(localStorage.getItem("barName")) ?? [];
-    localStorage.setItem(
-      "bars",
-      JSON.stringify([barAddress, ...previousSearches])
-    );
-    localStorage.setItem(
-      "barName",
-      JSON.stringify([barName, ...previousSearches2])
-    );
-  }
-});
+//     const previousSearches = JSON.parse(localStorage.getItem("bars")) ?? [];
+//     const previousSearches2 = JSON.parse(localStorage.getItem("barName")) ?? [];
+//     localStorage.setItem(
+//       "bars",
+//       JSON.stringify([barAddress, ...previousSearches])
+//     );
+//     localStorage.setItem(
+//       "barName",
+//       JSON.stringify([barName, ...previousSearches2])
+//     );
+//   }
+// });
 
 function removeBtn() {
   var elem = document.querySelector("#cardEl");
