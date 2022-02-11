@@ -11,21 +11,21 @@ blogPost.init(
     },
     author: {
       type: DataTypes.STRING,
-      allowNull: false, // future anon posting? true?
+      allowNull: false,
     },
     date: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     comment: {
       type: DataTypes.STRING,
-      unique: true,
+      // unique: true,
       allowNull: false,
     },
-    likes: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    // likes: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
   },
   {
     sequelize,
