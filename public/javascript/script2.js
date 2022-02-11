@@ -16,16 +16,7 @@ async function getInputValue() {
   } else if (registerAge < 21) {
     ageValEl.textContent = "Try in " + ageCalc + " more year";
   } else {
-    //location.href = "index_2.html"
-    const response = await fetch("/homepage", {
-      method: "GET",
-    });
-
-    if (response.ok) {
-      document.location.replace("/homepage");
-    } else {
-      console.log(response.statusText);
-    }
+    document.location.replace("/homepage");
   }
 }
 
