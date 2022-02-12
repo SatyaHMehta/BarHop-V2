@@ -1,6 +1,7 @@
 const router = require('express').Router()
 // const { User, blogPost} = require('../models');
 const withAuth = require('../utils/auth');
+const blogPost = require('../models/blogPost');
 
 router.get('/', async (req, res) => {
   try {
@@ -91,7 +92,15 @@ router.get('/search', (req, res) => {
 });
 
 router.get('/post', async (req, res) => {
-  res.render('post')
+  
+      // Query - get all the data in the table
+  const blogs = await blogPost.findAll().catch((err) => { 
+      res.json(err);
+    });
+      const allBlogs = blogs.map((blog) => blog.get({ plain: true }));
+      console.log(allBlogs)
+    
+      res.render('post', { allBlogs });
 })
 
 router.get('/review', async (req, res) => {
