@@ -26,55 +26,57 @@
 
     <div class="row medium-8 large-7 columns">
       <div class="blog-post">
-        <h3>{{blogPost.title}}<small>{{blogPost.date}}</small></h3>
+        {{#each blog as |blog|}}
+        <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
         <img class="thumbnail" src="https://placehold.it/850x350">
-        <p>{{blogPost.comment}}</p>
-        <div>{{blogPost.likes}}</div>
+        <p>{{blog.comment}}</p>
+        <div>{{blog.likes}}</div>
         <div></div>
         <div class="callout">
           <ul class="menu simple">
-            <li><a href="#">{{blogPost.author}}</a></li>
+            <li><a href="#">{{blog.author}}</a></li>
+            {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
+          </ul>
+        </div>
+        {{/each}}
+      </div>
+
+      <div class="blog-post">
+        <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
+        <img class="thumbnail" src="https://placehold.it/850x350">
+        <p>{{blog.comment}}</p>
+        <div>{{blog.likes}}</div>
+        <div class="callout">
+          <ul class="menu simple">
+            <li><a href="#">{{blog.author}}</a></li>
             {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
           </ul>
         </div>
       </div>
 
       <div class="blog-post">
-        <h3>{{blogPost.title}}<small>{{blogPost.date}}</small></h3>
+        <h3>post title<small>{{blog.date}}</small></h3>
         <img class="thumbnail" src="https://placehold.it/850x350">
-        <p>{{blogPost.comment}}</p>
-        <div>{{blogPost.likes}}</div>
+        <p>{{blog.comment}}</p>
+        <div>{{blog.likes}}</div>
+        <div></div>
         <div class="callout">
           <ul class="menu simple">
-            <li><a href="#">{{blogPost.author}}</a></li>
+            <li><a href="#">{{blog.author}}</a></li>
             {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
           </ul>
         </div>
       </div>
 
       <div class="blog-post">
-        <h3>post title<small>{{blogPost.date}}</small></h3>
+        <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
         <img class="thumbnail" src="https://placehold.it/850x350">
-        <p>{{blogPost.comment}}</p>
-        <div>{{blogPost.likes}}</div>
+        <p>{{blog.comment}}</p>
+        <div>{{blog.likes}}</div>
         <div></div>
         <div class="callout">
           <ul class="menu simple">
-            <li><a href="#">{{blogPost.author}}</a></li>
-            {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
-          </ul>
-        </div>
-      </div>
-
-      <div class="blog-post">
-        <h3>{{blogPost.title}}<small>{{blogPost.date}}</small></h3>
-        <img class="thumbnail" src="https://placehold.it/850x350">
-        <p>{{blogPost.comment}}</p>
-        <div>{{blogPost.likes}}</div>
-        <div></div>
-        <div class="callout">
-          <ul class="menu simple">
-            <li><a href="#">{{blogPost.author}}</a></li>
+            <li><a href="#">{{blog.author}}</a></li>
             {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
           </ul>
         </div>
