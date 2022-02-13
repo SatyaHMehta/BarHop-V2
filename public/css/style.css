@@ -16,6 +16,13 @@ body {
   background-color: black;
 }
 
+.navH {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
 .tagLine {
   font-size: 40px;
   color: rgb(226, 39, 39);

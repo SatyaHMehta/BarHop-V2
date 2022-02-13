@@ -1,0 +1,23 @@
+.log-form {
+    padding: 1rem 1.5em;
+    border: 1px solid #cacaca;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.signup-form {
+    padding: 1rem 1.5em;
+    border: 1px solid #cacaca;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.side {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
