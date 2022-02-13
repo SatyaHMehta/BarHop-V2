@@ -1,8 +1,8 @@
-const User = require('./user')
-const blogPost = require('./blogPost')
+// const User = require('./user')
+// const blogPost = require('./blogPost')
 
 // User.hasMany(blogPost, {
-//     foreignKey: 'user_id',
+//     foreignKey: 'blog_id',
 //     onDelete: 'CASCADE'
 // })
 
@@ -12,4 +12,4 @@ const blogPost = require('./blogPost')
 //     onDelete: 'CASCADE'
 // })
 
-module.exports = {User, blogPost}
+// module.exports = {User, blogPost}

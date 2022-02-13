@@ -19,7 +19,6 @@ const loginFormHandler = async (event) => {
     } else {
       alert(response.statusText);
     }
-
   }
 };
 
@@ -46,8 +45,7 @@ const signupFormHandler = async (event) => {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
-    });
-
+    }).then(document.location.replace("/homepage"));
   } else {
     document.location.replace("/homepage");
   }
@@ -57,8 +55,7 @@ const signupFormHandler = async (event) => {
 //   .querySelector(".login-form")
 //   .addEventListener("submit", loginFormHandler);
 // Need a Id's for landing page handlebars
-// 
+//
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
-

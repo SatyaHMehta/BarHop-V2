@@ -91,9 +91,17 @@ router.get('/search', (req, res) => {
 //   res.render('search');
 // });
 
-// router.get('/post', async (req, res) => {
-//   res.render('post')
-// })
+router.get('/post', async (req, res) => {
+  
+      // Query - get all the data in the table
+  const blogs = await blogPost.findAll().catch((err) => { 
+      res.json(err);
+    });
+      const allBlogs = blogs.map((blog) => blog.get({ plain: true }));
+      console.log(allBlogs)
+    
+      res.render('post', { allBlogs });
+})
 
 router.get('/review', async (req, res) => {
   res.render('review')
