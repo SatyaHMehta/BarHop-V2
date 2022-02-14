@@ -86,7 +86,7 @@ function generateCards(bars, i) {
   addBtn.innerHTML = "Add";
   addBtn.classList.add("addBtn");
   barCardEl.appendChild(addBtn);
-  rating = bars.businesses[i].rating
+  rating = bars.businesses[i].rating;
   let barInfo = [
     document.createElement("h2"),
     document.createElement("span"),
@@ -100,9 +100,9 @@ function generateCards(bars, i) {
     bars.businesses[i].location.display_address[0] +
       " " +
       bars.businesses[i].location.display_address[1],
-    'phone: ' + bars.businesses[i].phone,
-    'rating: ' + `${"⭐"}`.repeat(Math.round(rating)),
-    'reviews: ' + bars.businesses[i].review_count,
+    "phone: " + bars.businesses[i].phone,
+    "rating: " + `${"⭐"}`.repeat(Math.round(rating)),
+    "reviews: " + bars.businesses[i].review_count,
   ];
 
   let barId = [
@@ -130,32 +130,32 @@ formEl.addEventListener("submit", function (e) {
   inputEl.value = "";
 });
 
-// barDiv.addEventListener("click", function (e) {
-//   if (e.target.matches(".addBtn")) {
-//     var clickedBtn = e.target;
-//     var barName = clickedBtn.parentElement.children[1].children[0].innerHTML;
-//     var barAddress = clickedBtn.parentElement.children[1].children[1].innerHTML;
-//     var newBtn = document.createElement("button");
+barDiv.addEventListener("click", function (e) {
+  if (e.target.matches(".addBtn")) {
+    var clickedBtn = e.target;
+    var barName = clickedBtn.parentElement.children[1].children[0].innerHTML;
+    var barAddress = clickedBtn.parentElement.children[1].children[1].innerHTML;
+    var newBtn = document.createElement("button");
 
-//     newBtn.textContent = barName;
-//     newBtn.setAttribute("id", "cardEl");
-//     newBtn.setAttribute("data-value", barAddress);
-//     newBtn.setAttribute("class", "button success expanded");
-//     newBtn.setAttribute("onclick", "removeBtn()");
-//     sortableDiv.append(newBtn);
+    newBtn.textContent = barName;
+    newBtn.setAttribute("id", "cardEl");
+    newBtn.setAttribute("data-value", barAddress);
+    newBtn.setAttribute("class", "button success expanded");
+    newBtn.setAttribute("onclick", "removeBtn()");
+    sortableDiv.append(newBtn);
 
-//     const previousSearches = JSON.parse(localStorage.getItem("bars")) ?? [];
-//     const previousSearches2 = JSON.parse(localStorage.getItem("barName")) ?? [];
-//     localStorage.setItem(
-//       "bars",
-//       JSON.stringify([barAddress, ...previousSearches])
-//     );
-//     localStorage.setItem(
-//       "barName",
-//       JSON.stringify([barName, ...previousSearches2])
-//     );
-//   }
-// });
+    const previousSearches = JSON.parse(localStorage.getItem("bars")) ?? [];
+    const previousSearches2 = JSON.parse(localStorage.getItem("barName")) ?? [];
+    localStorage.setItem(
+      "bars",
+      JSON.stringify([barAddress, ...previousSearches])
+    );
+    localStorage.setItem(
+      "barName",
+      JSON.stringify([barName, ...previousSearches2])
+    );
+  }
+});
 
 function removeBtn() {
   var elem = document.querySelector("#cardEl");
@@ -190,7 +190,7 @@ getRoute.addEventListener("click", function (each) {
       addresses[7],
       addresses[8],
       addresses[9],
-    ]
+    ],
   });
   console.log(addresses);
   map.addLayer(
@@ -222,4 +222,3 @@ getRoute.addEventListener("click", function (each) {
 //     easing: "easeOutExpo",
 //     delay: 1000
 //   });
-
