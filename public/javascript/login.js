@@ -2,12 +2,12 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const email = document.querySelector("#email-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+  const email = document.querySelector("#login-email").value.trim();
+  const password = document.querySelector("#login-password").value.trim();
 
   if (email && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch("/api/users/login", {
+    const response = await fetch("api/users/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
@@ -15,9 +15,9 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace("/profile");
+      document.location.replace("/search");
     } else {
-      alert(response.statusText);
+      alert("incorrect email or password, please try again!");
     }
   }
 };
@@ -45,17 +45,26 @@ const signupFormHandler = async (event) => {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
-    }).then(document.location.replace("/homepage"));
-  } else {
-    document.location.replace("/homepage");
-  }
-};
+    })
 
-// document
-//   .querySelector(".login-form")
-//   .addEventListener("submit", loginFormHandler);
-// Need a Id's for landing page handlebars
-//
+    const getResponse = await fetch("/search", {
+      method: "GET",
+    });
+    
+    if (getResponse.ok) {
+      // If successful, redirect the browser to the profile page
+      document.location.replace("/search");
+    } else {
+      alert(response.statusText);
+    }
+};
+}
+
+document
+  .querySelector(".login-form")
+  .addEventListener("submit", loginFormHandler);
+
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
+
