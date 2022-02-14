@@ -22,6 +22,7 @@ blogPost.init(
       // unique: true,
       allowNull: false,
     },
+    
     // likes: {
     //   type: DataTypes.INTEGER,
     //   allowNull: false,
