@@ -169,6 +169,12 @@ clearList.addEventListener("click", function (e) {
   sortableDiv.html("");
 });
 
+review.addEventListener("click", reviewPost)
+
+function reviewPost() {
+  document.location.replace("/review")
+}
+
 getRoute.addEventListener("click", function (each) {
   each.preventDefault;
   const selectedBars = document.querySelectorAll("#cardEl");
