@@ -37,6 +37,14 @@ router.get('/homepage', async (req, res) => {
   }
 })
 
+
+router.get('/logout', async (req, res) => {
+  try {
+    res.render('search');
+  } catch (err){
+    res.status(500).json(err);
+  }
+})
 // router.get('/blogPost/:id', async (req, res) => {
 //   try {
 //     const blogData = await blogPost.findByPk(req.params.id, {
