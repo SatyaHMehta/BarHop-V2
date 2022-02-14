@@ -203,6 +203,14 @@ getRoute.addEventListener("click", function (each) {
   );
 });
 
+document.querySelector("#home-logout").addEventListener("click", logoutx )
+
+
+document.querySelector("#logout-post").addEventListener("click", logoutx)
+
+function logoutx() {
+  document.location.replace("/")
+}
 // //Wrap every letter in a span
 // var textWrapper = document.querySelector('.heading');
 // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
