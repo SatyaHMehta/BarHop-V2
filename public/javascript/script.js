@@ -3,7 +3,9 @@ var formEl = document.querySelector("form");
 var barHistory = document.querySelector("#bar-history");
 var getRoute = document.querySelector("#generate-route");
 var clearList = document.querySelector("#clear-list");
-// var barDiv = document.querySelector("#bars-div");
+var barDiv = document.querySelector("#bars-div");
+let review = document.querySelector("#write-a-review");
+
 var removeCard = document.querySelector("#cardEl");
 var sortableDiv = $(".sortable");
 barAddress = [];
@@ -222,3 +224,7 @@ getRoute.addEventListener("click", function (each) {
 //     easing: "easeOutExpo",
 //     delay: 1000
 //   });
+function sayHello() {
+  document.location.replace("/review");
+}
+review.addEventListener('click', sayHello)
