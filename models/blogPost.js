@@ -22,7 +22,10 @@ blogPost.init(
       // unique: true,
       allowNull: false,
     },
-    locations: {
+    barName: {
+      type: DataTypes.STRING,
+  },
+    barAddress: {
       type: DataTypes.STRING,
     },
 

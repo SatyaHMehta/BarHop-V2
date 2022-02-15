@@ -82,6 +82,14 @@ body {
   justify-content: center;
 }
 
+.navhome {
+  border-radius: 10px;
+}
+
+a {
+  color: white;
+}
+
 .mid {
   display: flex;
   flex-wrap: wrap;
@@ -106,6 +114,14 @@ body {
 .input-group-rounded .input-group-button .button {
   border-radius: 0 5000px 5000px 0;
   font-size: 0.8rem;
+}
+
+.searcNavBtn {
+  align-items: center;
+}
+
+#write-a-review{
+  border-radius: 10px;
 }
 
 #map {

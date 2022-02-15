@@ -19,4 +19,14 @@ module.exports = {
       return `<span for="img" aria-label="gear">⚙️</span>`;
     }
   },
+  list:
+    ("list",
+    function (bars, options) {
+      let barsArray = bars.barName.split(",");
+      let out = "<ul>\n"
+      barsArray.forEach((bar) => {
+        out = out + "<li>" + bar + "</li>";
+      });
+      return out + "</ul>";
+    }),
 };

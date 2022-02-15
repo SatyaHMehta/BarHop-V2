@@ -29,13 +29,7 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-router.get("/homepage", async (req, res) => {
-  try {
-    res.render("homepage");
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+
 
 router.get("/logout", async (req, res) => {
   try {

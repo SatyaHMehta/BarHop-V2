@@ -29,7 +29,7 @@
     <div class="row medium-8 large-7 columns ">
       <div class="blog-post">
         {{#each allBlogs as |blog|}}
-          <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
+          <h3>{{blog.title}}<small> {{blog.date}}</small></h3>
           <div class="barBtn"></div>
           {{! <img class="thumbnail" src="https://placehold.it/850x350"> }}
           <p>{{blog.comment}}</p>
@@ -38,7 +38,7 @@
           <div class="callout">
             <ul class="menu simple">
               <li>author: {{blog.author}}</li>
-            </ul>1
+            </ul>
           </div>
         {{/each}}
       </div>
