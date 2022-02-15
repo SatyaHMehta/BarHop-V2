@@ -125,17 +125,10 @@ body {
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
 .views {
   border: black solid 3px;
 }
-
-/* =============================== test tagline */
-
-
-
-
-
-
 .word {
 	font-family: 'Luxurious Roman', cursive;
 	perspective: 1000px; 
@@ -242,24 +235,21 @@ body {
 	}
 }
 
-/* Other styles */
-/* body {
-	background-color: skyblue;
-	color: #fff;
-	display: flex;
-	font-family: 'Roboto', sans-serif;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	height: 100vh;
-	margin: 0;
-} */
 
-/* .fixed {
-	position: fixed;
-	top: 40px;
-	left: 50%;
-	transform: translateX(-50%);
+.nav {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
 }
- */
+
+.nav ul button {
+  border: 2px solid blue;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 10px;
+  float: right;
+}
+
+
+
 
