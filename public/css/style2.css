@@ -242,24 +242,5 @@ body {
 	}
 }
 
-/* Other styles */
-/* body {
-	background-color: skyblue;
-	color: #fff;
-	display: flex;
-	font-family: 'Roboto', sans-serif;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	height: 100vh;
-	margin: 0;
-} */
 
-/* .fixed {
-	position: fixed;
-	top: 40px;
-	left: 50%;
-	transform: translateX(-50%);
-}
- */
 
