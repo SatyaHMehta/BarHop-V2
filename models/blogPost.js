@@ -22,7 +22,10 @@ blogPost.init(
       // unique: true,
       allowNull: false,
     },
-    
+    locations: {
+      type: DataTypes.STRING,
+    },
+
     // likes: {
     //   type: DataTypes.INTEGER,
     //   allowNull: false,

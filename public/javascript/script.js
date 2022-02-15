@@ -12,6 +12,7 @@ barAddress = [];
 var addresses = [];
 var localStorageBars = [];
 var localStorageBarNames = [];
+var chosenLocations = [];
 
 const lastSearches = JSON.parse(localStorage.getItem("bars")) ?? [];
 const lastSearches2 = JSON.parse(localStorage.getItem("barName")) ?? [];
@@ -146,6 +147,8 @@ barDiv.addEventListener("click", function (e) {
     newBtn.setAttribute("onclick", "removeBtn()");
     sortableDiv.append(newBtn);
 
+    chosenLocations.push(barName);
+
     const previousSearches = JSON.parse(localStorage.getItem("bars")) ?? [];
     const previousSearches2 = JSON.parse(localStorage.getItem("barName")) ?? [];
     localStorage.setItem(
@@ -169,10 +172,10 @@ clearList.addEventListener("click", function (e) {
   sortableDiv.html("");
 });
 
-review.addEventListener("click", reviewPost)
+review.addEventListener("click", reviewPost);
 
 function reviewPost() {
-  document.location.replace("/review")
+  document.location.replace("/review");
 }
 
 getRoute.addEventListener("click", function (each) {
@@ -209,13 +212,12 @@ getRoute.addEventListener("click", function (each) {
   );
 });
 
-document.querySelector("#home-logout").addEventListener("click", logoutx )
+document.querySelector("#home-logout").addEventListener("click", logoutx);
 
-
-document.querySelector("#logout-post").addEventListener("click", logoutx)
+//document.querySelector("#logout-post").addEventListener("click", logoutx)
 
 function logoutx() {
-  document.location.replace("/")
+  document.location.replace("/");
 }
 // //Wrap every letter in a span
 // var textWrapper = document.querySelector('.heading');
@@ -241,4 +243,4 @@ function logoutx() {
 function sayHello() {
   document.location.replace("/review");
 }
-review.addEventListener('click', sayHello)
+review.addEventListener("click", sayHello);
