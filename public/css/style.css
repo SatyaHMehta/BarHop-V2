@@ -82,6 +82,14 @@ body {
   justify-content: center;
 }
 
+.navhome {
+  border-radius: 10px;
+}
+
+a {
+  color: white;
+}
+
 .mid {
   display: flex;
   flex-wrap: wrap;

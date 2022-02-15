@@ -214,7 +214,7 @@ getRoute.addEventListener("click", function (each) {
 
 document.querySelector("#home-logout").addEventListener("click", logoutx);
 
-//document.querySelector("#logout-post").addEventListener("click", logoutx)
+document.querySelector("#logout-post").addEventListener("click", logoutx)
 
 function logoutx() {
   document.location.replace("/");
