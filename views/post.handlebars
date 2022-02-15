@@ -1,4 +1,3 @@
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,7 +18,6 @@
         </ul>
       </div>
     </nav>
-
     <div class="callout large primary">
       <div class="row column text-center">
         <h1>BarHop</h1>
@@ -29,24 +27,20 @@
     <div class="row medium-8 large-7 columns">
       <div class="blog-post">
         {{#each allBlogs as |blog|}}
-          <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
+          <h3>{{blog.title}}<small> {{blog.date}}</small></h3>
           <div class="barBtn"></div>
           {{! <img class="thumbnail" src="https://placehold.it/850x350"> }}
           <p>{{blog.comment}}</p>
           {{#list blog}}{{list}} {{lastname}}{{/list}}  
-
           <button type="submit" class="button expanded">Follow Route</button>
-
           <div class="callout">
             <ul class="menu simple">
               <li>author: {{blog.author}}</li>
-              
-            </ul>1
+            </ul>
           </div>
         {{/each}}
       </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script
       src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"
@@ -54,8 +48,7 @@
     <script>
       $(document).foundation();
     </script>
-
+    <script src="./javascript/review.js"></script>
+<script src="./javascript/blogPage.js"></script>
   </body>
 </html>
-<script src="./javascript/review.js"></script>
-<script src="./javascript/blogPage.js"></script>
