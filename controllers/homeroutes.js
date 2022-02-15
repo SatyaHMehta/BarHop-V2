@@ -1,15 +1,15 @@
-const router = require('express').Router()
+const router = require("express").Router();
 // const { User, blogPost} = require('../models');
-const withAuth = require('../utils/auth');
-const blogPost = require('../models/blogPost');
+const withAuth = require("../utils/auth");
+const blogPost = require("../models/blogPost");
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     // if (req.session.logged_in) {
     //   res.redirect('/p');
     //   return;
     // }
-  
+
     // Get all projects and JOIN with user data
     // const blogData = await blogPost.findAll({
     //   include: [
@@ -24,27 +24,26 @@ router.get('/', async (req, res) => {
     // const blogPost = blogData.map((project) => project.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('landing');
+    res.render("landing");
   } catch (err) {
     res.status(500).json(err);
   }
 });
-router.get('/homepage', async (req, res) => {
+router.get("/homepage", async (req, res) => {
   try {
-    res.render('homepage');
-  } catch (err){
+    res.render("homepage");
+  } catch (err) {
     res.status(500).json(err);
   }
-})
+});
 
-
-router.get('/logout', async (req, res) => {
+router.get("/logout", async (req, res) => {
   try {
-    res.render('search');
-  } catch (err){
+    res.render("search");
+  } catch (err) {
     res.status(500).json(err);
   }
-})
+});
 // router.get('/blogPost/:id', async (req, res) => {
 //   try {
 //     const blogData = await blogPost.findByPk(req.params.id, {
@@ -87,59 +86,54 @@ router.get('/logout', async (req, res) => {
 //   }
 // });
 
-
-router.get('/search', (req, res) => {
-
-  res.render('search');
+router.get("/search", (req, res) => {
+  res.render("search");
 });
 
 // router.get('/search', (req, res) => {
 //   // If the user is already logged in, redirect the request to another route
- 
+
 //   res.render('search');
 // });
 
-router.get('/post', async (req, res) => {
-  
-      // Query - get all the data in the table
-  const blogs = await blogPost.findAll().catch((err) => { 
-      res.json(err);
-    });
-      const allBlogs = blogs.map((blog) => blog.get({ plain: true }));
-      console.log(allBlogs)
-    
-      res.render('post', { allBlogs });
-})
+router.get("/post", async (req, res) => {
+  // Query - get all the data in the table
+  console.log(req.body);
+  const blogs = await blogPost.findAll().catch((err) => {
+    res.json(err);
+  });
+  const allBlogs = blogs.map((blog) => blog.get({ plain: true }));
+  console.log(allBlogs);
 
-router.get('/review', async (req, res) => {
-  res.render('review')
-})
+  res.render("post", { allBlogs });
+});
 
+router.get("/review", async (req, res) => {
+  res.render("review");
+});
 
 // router.get('', async(req, res) => {
 
 // })
 
+// router.get("/post", async (req, res) => {
+//   // res.render('post', {blogPost})
+//   // console.log('hello')
 
+//   try {
+//     console.log(req.body);
 
-router.get('/post', async (req, res) => {
-  // res.render('post', {blogPost})
-  // console.log('hello')
-  try {
-  const blogs = await blogPost.findAll({
-    // include: [User]
-  })
-  console.log(blogs)
+//     const blogs = await blogPost.findAll({
+//       // include: [User]
+//     });
+//     console.log(blogs);
 
-  const blog = blogs.map((blog) => blog.get({ plain: true }));
-  // }).then((blogPost) => res.json(blogPost))
-  res.render('post', { blog })
-  } catch (err) {
-    res.status(500).json(err)
-  }
-});
-
-
-
+//     const blog = blogs.map((blog) => blog.get({ plain: true }));
+//     // }).then((blogPost) => res.json(blogPost))
+//     res.render("post", { blog });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
