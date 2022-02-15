@@ -29,11 +29,15 @@
       <div class="blog-post">
         {{#each allBlogs as |blog|}}
           <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
-          <p>{{blog.locations}}</p>
+          <div class="barBtn"></div>
+          <p>{{blog.barName}}</p>
+          <p>{{blog.barAddress}}</p>
           {{! <img class="thumbnail" src="https://placehold.it/850x350"> }}
           <p>{{blog.comment}}</p>
           {{!-- <div>{{blog.likes}}</div> --}}
-          <div></div>
+
+          <button type="submit" class="button expanded">Signup</button>
+
           <div class="callout">
             <ul class="menu simple">
               <li>author: {{blog.author}}</li>
@@ -54,3 +58,5 @@
 
   </body>
 </html>
+<script src="./javascript/review.js"></script>
+<script src="./javascript/blogPage.js"></script>

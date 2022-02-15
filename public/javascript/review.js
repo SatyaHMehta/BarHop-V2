@@ -4,17 +4,18 @@ const reviewHandler = async (event) => {
   const author = document.querySelector("#review-username").value.trim();
   const date = document.querySelector("#review-date").value.trim();
   const comment = document.querySelector("#review-comment").value.trim();
-  const locationArr = localStorage.getItem("barName");
-  //const locations = "Testing";
-  //remove the aquare bracket beginning & ending of the array
-  const locations = locationArr.replace(/^\[([\s\S]*)]$/, "$1");
+  const barName = JSON.parse(localStorage.getItem("barName")).toString() ?? [];
+  const barAddress = JSON.parse(localStorage.getItem("bars")).toString() ?? [];
 
-  console.log(locations);
-  console.log("hey");
+  //const locations = "Testing";;
+  //remove the aquare bracket beginning & ending of the array
+  const barNames = barName.split(",");
+  const barAddresses = barAddress.split(/,(?= \d{2} )/);
+
 
   const postResponse = await fetch("/api/blog", {
     method: "POST",
-    body: JSON.stringify({ title, author, date, comment, locations }),
+    body: JSON.stringify({ title, author, date, comment, barName, barAddress }),
     headers: { "Content-Type": "application/json" },
   });
 
@@ -23,7 +24,8 @@ const reviewHandler = async (event) => {
   });
 
   if (getResponse.ok) {
-    document.location.replace("/post");
+    await document.location.replace("/post")
+   
   } else {
     alert(getResponse.statusText);
   }
