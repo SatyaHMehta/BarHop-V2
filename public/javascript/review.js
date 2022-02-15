@@ -9,8 +9,8 @@ const reviewHandler = async (event) => {
 
   //const locations = "Testing";;
   //remove the aquare bracket beginning & ending of the array
-  const barNames = barName.split(",");
-  const barAddresses = barAddress.split(/,(?= \d{2} )/);
+  // const barNames = barName.split(",");
+  // const barAddresses = barAddress.split(/,(?= \d{2} )/);
 
 
   const postResponse = await fetch("/api/blog", {

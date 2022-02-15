@@ -24,7 +24,7 @@ blogPost.init(
     },
     barName: {
       type: DataTypes.STRING,
-    },
+  },
     barAddress: {
       type: DataTypes.STRING,
     },

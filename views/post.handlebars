@@ -1,3 +1,4 @@
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,19 +31,17 @@
         {{#each allBlogs as |blog|}}
           <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
           <div class="barBtn"></div>
-          <p>{{blog.barName}}</p>
-          <p>{{blog.barAddress}}</p>
           {{! <img class="thumbnail" src="https://placehold.it/850x350"> }}
           <p>{{blog.comment}}</p>
-          {{!-- <div>{{blog.likes}}</div> --}}
+          {{#list blog}}{{list}} {{lastname}}{{/list}}  
 
-          <button type="submit" class="button expanded">Signup</button>
+          <button type="submit" class="button expanded">Follow Route</button>
 
           <div class="callout">
             <ul class="menu simple">
               <li>author: {{blog.author}}</li>
-              {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
-            </ul>
+              
+            </ul>1
           </div>
         {{/each}}
       </div>
