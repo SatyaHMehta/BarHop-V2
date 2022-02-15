@@ -222,3 +222,5 @@ getRoute.addEventListener("click", function (each) {
 //     easing: "easeOutExpo",
 //     delay: 1000
 //   });
+
+
