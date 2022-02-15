@@ -240,7 +240,9 @@ function logoutx() {
 //     easing: "easeOutExpo",
 //     delay: 1000
 //   });
+
 function sayHello() {
   document.location.replace("/review");
 }
 review.addEventListener("click", sayHello);
+
