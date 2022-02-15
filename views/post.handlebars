@@ -8,6 +8,8 @@
       rel="stylesheet"
       href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"
     />
+    <link rel="stylesheet" href="./css/style.css"/>
+<link rel="stylesheet" href="./css/style2.css"/>
   </head>
   <body>
     <nav class="top-bar">
@@ -18,32 +20,29 @@
         </ul>
       </div>
     </nav>
-
     <div class="callout large primary">
       <div class="row column text-center">
         <h1>BarHop</h1>
         <h2 class="subheader">Community</h2>
       </div>
     </div>
-    <div class="row medium-8 large-7 columns">
+    <div class="row medium-8 large-7 columns ">
       <div class="blog-post">
         {{#each allBlogs as |blog|}}
           <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
-          <p>{{blog.locations}}</p>
+          <div class="barBtn"></div>
           {{! <img class="thumbnail" src="https://placehold.it/850x350"> }}
           <p>{{blog.comment}}</p>
-          {{!-- <div>{{blog.likes}}</div> --}}
-          <div></div>
+          {{#list blog}}{{list}} {{lastname}}{{/list}}  
+          <button type="submit" class="button expanded">Follow Route</button>
           <div class="callout">
             <ul class="menu simple">
               <li>author: {{blog.author}}</li>
-              {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
-            </ul>
+            </ul>1
           </div>
         {{/each}}
       </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script
       src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"
@@ -51,6 +50,7 @@
     <script>
       $(document).foundation();
     </script>
-
+    <script src="./javascript/review.js"></script>
+<script src="./javascript/blogPage.js"></script>
   </body>
-</html>
+</html

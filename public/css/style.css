@@ -119,7 +119,7 @@ body {
 
 #card {
   display: flex;
-  background-color: rgba(237, 237, 238, 0.89);
+  background-color: rgba(73, 73, 77, 0.89);
   height: fit-content;
   padding: 2%;
   align-items: center;
