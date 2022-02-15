@@ -1,0 +1,46 @@
+.blog-post {
+  /* border: #87878a solid 2px; */
+
+  background-color: rgb(241, 242, 243);
+  color: black;
+  box-shadow: 10px 7px grey;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.blog-post li {
+  list-style-type: none;
+}
+.blog-post p {
+  border-bottom: rgb(208, 210, 212) solid 1px;
+  text-decoration: none;
+}
+.menu {
+  float: right;
+}
+.top-bar {
+  background-color: black;
+}
+body {
+  background-color: rgb(252, 248, 248);
+}
+
+.callout.large {
+  background-color: black;
+  color: white;
+}
+#menu {
+  background-color: black;
+}
+.button {
+  background-color: black;
+}
+.callout li {
+  font-size: 20px;
+  background-color: white;
+  border: grey solid 1px;
+  padding: 1px;
+  position: relative;
+  bottom: 17px;
+  left: 17px;
+}

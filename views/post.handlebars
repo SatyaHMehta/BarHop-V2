@@ -4,17 +4,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barhop</title>
+     
+
     <link
       rel="stylesheet"
       href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css"/>
-<link rel="stylesheet" href="./css/style2.css"/>
+    <link rel="stylesheet" href="./css/poststyle.css">
+   
   </head>
   <body>
-    <nav class="top-bar">
+    <nav class="top-bar bg-black">
       <div class="top-bar-left">
-        <ul class="menu">
+        <ul class="menu" id="menu">
           <button class="menu-text"><a href="/homepage">Home</a></button>
           <button id="logout-post"><a href="/logout">Logout</a></button>
         </ul>
@@ -26,10 +28,10 @@
         <h2 class="subheader">Community</h2>
       </div>
     </div>
-    <div class="row medium-8 large-7 columns ">
+    <div class="row medium-8 large-7 columns">
       <div class="blog-post">
         {{#each allBlogs as |blog|}}
-          <h3>{{blog.title}}<small> {{blog.date}}</small></h3>
+          <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
           <div class="barBtn"></div>
           {{! <img class="thumbnail" src="https://placehold.it/850x350"> }}
           <p>{{blog.comment}}</p>
@@ -53,4 +55,4 @@
     <script src="./javascript/review.js"></script>
 <script src="./javascript/blogPage.js"></script>
   </body>
-</html
+</html>
