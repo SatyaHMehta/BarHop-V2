@@ -3,13 +3,16 @@ var formEl = document.querySelector("form");
 var barHistory = document.querySelector("#bar-history");
 var getRoute = document.querySelector("#generate-route");
 var clearList = document.querySelector("#clear-list");
-// var barDiv = document.querySelector("#bars-div");
+var barDiv = document.querySelector("#bars-div");
+let review = document.querySelector("#write-a-review");
+
 var removeCard = document.querySelector("#cardEl");
 var sortableDiv = $(".sortable");
 barAddress = [];
 var addresses = [];
 var localStorageBars = [];
 var localStorageBarNames = [];
+var chosenLocations = [];
 
 const lastSearches = JSON.parse(localStorage.getItem("bars")) ?? [];
 const lastSearches2 = JSON.parse(localStorage.getItem("barName")) ?? [];
@@ -144,6 +147,8 @@ barDiv.addEventListener("click", function (e) {
     newBtn.setAttribute("onclick", "removeBtn()");
     sortableDiv.append(newBtn);
 
+    chosenLocations.push(barName);
+
     const previousSearches = JSON.parse(localStorage.getItem("bars")) ?? [];
     const previousSearches2 = JSON.parse(localStorage.getItem("barName")) ?? [];
     localStorage.setItem(
@@ -166,6 +171,12 @@ clearList.addEventListener("click", function (e) {
   e.preventDefault;
   sortableDiv.html("");
 });
+
+review.addEventListener("click", reviewPost);
+
+function reviewPost() {
+  document.location.replace("/review");
+}
 
 getRoute.addEventListener("click", function (each) {
   each.preventDefault;
@@ -201,6 +212,13 @@ getRoute.addEventListener("click", function (each) {
   );
 });
 
+document.querySelector("#home-logout").addEventListener("click", logoutx);
+
+//document.querySelector("#logout-post").addEventListener("click", logoutx)
+
+function logoutx() {
+  document.location.replace("/");
+}
 // //Wrap every letter in a span
 // var textWrapper = document.querySelector('.heading');
 // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -223,4 +241,8 @@ getRoute.addEventListener("click", function (each) {
 //     delay: 1000
 //   });
 
+function sayHello() {
+  document.location.replace("/review");
+}
+review.addEventListener("click", sayHello);
 
