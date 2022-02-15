@@ -246,6 +246,7 @@ body {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  float: right;
 }
 
 .nav ul button {
@@ -255,3 +256,22 @@ body {
   margin: 10px;
   float: right;
 }
+
+.blog-post {
+  border: #303031 solid 2px;
+width: 400vw;
+height: auto;
+background-color: rgb(208, 210, 212);
+color: black;
+
+
+}
+.blog-post p {
+  border-bottom: rgb(208, 210, 212) solid 1px;
+}
+.menu {
+  float: right;
+  
+}
+
+
