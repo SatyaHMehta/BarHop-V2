@@ -1,3 +1,4 @@
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,16 +30,18 @@
       <div class="blog-post">
         {{#each allBlogs as |blog|}}
           <h3>{{blog.title}}<small>{{blog.date}}</small></h3>
-          <p>{{blog.locations}}</p>
+          <div class="barBtn"></div>
           {{! <img class="thumbnail" src="https://placehold.it/850x350"> }}
           <p>{{blog.comment}}</p>
-          {{!-- <div>{{blog.likes}}</div> --}}
-          <div></div>
+          {{#list blog}}{{list}} {{lastname}}{{/list}}  
+
+          <button type="submit" class="button expanded">Follow Route</button>
+
           <div class="callout">
             <ul class="menu simple">
               <li>author: {{blog.author}}</li>
-              {{!-- <li><a href="#">{{reply.comment}}</a></li> --}}
-            </ul>
+              
+            </ul>1
           </div>
         {{/each}}
       </div>
@@ -54,3 +57,5 @@
 
   </body>
 </html>
+<script src="./javascript/review.js"></script>
+<script src="./javascript/blogPage.js"></script>
