@@ -26,7 +26,6 @@ module.exports = {
       let out = "<ul>\n"
       barsArray.forEach((bar) => {
         out = out + "<li>" + bar + "</li>";
-       
       });
       return out + "</ul>";
     }),
