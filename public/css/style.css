@@ -108,6 +108,14 @@ body {
   font-size: 0.8rem;
 }
 
+.searcNavBtn {
+  align-items: center;
+}
+
+#write-a-review{
+  border-radius: 10px;
+}
+
 #map {
   height: 56vh;
   width: 100%;
