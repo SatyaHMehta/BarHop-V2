@@ -84,6 +84,7 @@ body {
 
 .navhome {
   border-radius: 10px;
+  float: right;
 }
 
 a {
